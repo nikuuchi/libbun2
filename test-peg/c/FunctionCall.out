@@ -1,0 +1,95 @@
+parsed:
+#translationunit {            ## by peg : null
+   #externaldeclaration {            ## by peg : null
+      #functiondefinition {            ## by peg : null
+         #declarationspecifiers {            ## by peg : null
+            #typespecifier: int    ## by peg : null
+         }
+         #declarator {            ## by peg : null
+            #directdeclarator {            ## by peg : null
+               #identifier: func   ## by peg : null
+               #parametertypelist {            ## by peg : null
+                  #parameterlist {            ## by peg : null
+                     #parameterdeclaration {            ## by peg : null
+                        #declarationspecifiers {            ## by peg : null
+                           #typespecifier: int    ## by peg : null
+                        }
+                        #declarator {            ## by peg : null
+                           #directdeclarator {            ## by peg : null
+                              #identifier: n   ## by peg : null
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         #compoundstatement {            ## by peg : null
+            #statement {            ## by peg : null
+               #returnstatement {            ## by peg : null
+                  #expression {            ## by peg : null
+                     #assignmentexpression {            ## by peg : null
+                        #unaryexpression {            ## by peg : null
+                           #postfixexpression {            ## by peg : null
+                              #primaryexpression {            ## by peg : null
+                                 #identifier: n   ## by peg : null
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   #externaldeclaration {            ## by peg : null
+      #functiondefinition {            ## by peg : null
+         #declarationspecifiers {            ## by peg : null
+            #typespecifier: int    ## by peg : null
+         }
+         #declarator {            ## by peg : null
+            #directdeclarator {            ## by peg : null
+               #identifier: main   ## by peg : null
+            }
+         }
+         #compoundstatement {            ## by peg : null
+            #statement {            ## by peg : null
+               #expressionstatement {            ## by peg : null
+                  #expression {            ## by peg : null
+                     #assignmentexpression {            ## by peg : null
+                        #unaryexpression {            ## by peg : null
+                           #postfixexpression {            ## by peg : null
+                              #primaryexpression {            ## by peg : null
+                                 #identifier: func   ## by peg : null
+                              }
+                              #argumentexpressionlist {            ## by peg : null
+                                 #integerconstant: 2   ## by peg : null
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+            #statement {            ## by peg : null
+               #returnstatement {            ## by peg : null
+                  #expression {            ## by peg : null
+                     #assignmentexpression {            ## by peg : null
+                        #unaryexpression {            ## by peg : null
+                           #postfixexpression {            ## by peg : null
+                              #primaryexpression {            ## by peg : null
+                                 #constant {            ## by peg : null
+                                    #integerconstant: 0   ## by peg : null
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

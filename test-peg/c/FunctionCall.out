@@ -24,8 +24,9 @@ parsed:
       }
       #compoundstatement {            ## by peg : null
          #expressionstatement {            ## by peg : null
-            #postfixexpression {            ## by peg : null
+             {            ## by peg : null
                #identifier: func   ## by peg : null
+               :    ## by peg : null
                #integerconstant: 2   ## by peg : null
             }
          }

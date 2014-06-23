@@ -1,0 +1,14 @@
+parsed:
+#translationunit {            ## by peg : null
+   #declaration {            ## by peg : null
+      #typespecifier {            ## by peg : null
+         #identifier: Type    ## by peg : null
+         #enumeratorlist {            ## by peg : null
+            #identifier: VOID   ## by peg : null
+            #identifier: INT   ## by peg : null
+            #identifier: CHAR
+   ## by peg : null
+         }
+      }
+   }
+}

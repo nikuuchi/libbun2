@@ -1,0 +1,13 @@
+parsed:
+#translationunit {            ## by peg : null
+   #declaration {            ## by peg : null
+      #typespecifier: void    ## by peg : null
+      #declarator {            ## by peg : null
+         #declarator {            ## by peg : null
+            #pointer: *   ## by peg : null
+            #identifier: Func   ## by peg : null
+         }
+         #typespecifier: void   ## by peg : null
+      }
+   }
+}

@@ -1,0 +1,31 @@
+parsed:
+#translationunit {            ## by peg : null
+   #declaration {            ## by peg : null
+      #typespecifier {            ## by peg : null
+         #union: union    ## by peg : null
+         #identifier: data    ## by peg : null
+         #structdeclaration {            ## by peg : null
+            #typespecifier: int    ## by peg : null
+            #declarator {            ## by peg : null
+               #identifier: id   ## by peg : null
+            }
+         }
+         #structdeclaration {            ## by peg : null
+            #typespecifier: char    ## by peg : null
+            #declarator {            ## by peg : null
+               #pointer: *   ## by peg : null
+               #identifier: content   ## by peg : null
+            }
+         }
+      }
+   }
+   #declaration {            ## by peg : null
+      #typespecifier {            ## by peg : null
+         #union: union    ## by peg : null
+         #identifier: data    ## by peg : null
+      }
+      #declarator {            ## by peg : null
+         #identifier: d   ## by peg : null
+      }
+   }
+}

@@ -1,0 +1,140 @@
+parsed:
+#translationunit {            ## by peg : null
+   #declaration {            ## by peg : null
+      #typespecifier {            ## by peg : null
+         #struct: struct    ## by peg : null
+         #identifier: student    ## by peg : null
+         #structdeclaration {            ## by peg : null
+            #typespecifier: int    ## by peg : null
+            #declarator {            ## by peg : null
+               #identifier: number   ## by peg : null
+            }
+         }
+         #structdeclaration {            ## by peg : null
+            #typespecifier: char    ## by peg : null
+            #declarator {            ## by peg : null
+               #pointer: *   ## by peg : null
+               #identifier: name   ## by peg : null
+            }
+         }
+      }
+   }
+   #declaration {            ## by peg : null
+      #typespecifier {            ## by peg : null
+         #struct: struct    ## by peg : null
+         #identifier: student    ## by peg : null
+      }
+      #declarator {            ## by peg : null
+         #identifier: Student   ## by peg : null
+      }
+   }
+   #functiondefinition {            ## by peg : null
+      #typedefname {            ## by peg : null
+         #identifier: Student    ## by peg : null
+      }
+      #declarator {            ## by peg : null
+         #pointer: *   ## by peg : null
+         #identifier: new_Student   ## by peg : null
+         #typespecifier: void   ## by peg : null
+      }
+      #compoundstatement {            ## by peg : null
+         #declaration {            ## by peg : null
+            #typedefname {            ## by peg : null
+               #identifier: Student    ## by peg : null
+            }
+            #initdeclarator {            ## by peg : null
+               #declarator {            ## by peg : null
+                  #pointer: *   ## by peg : null
+                  #identifier: s    ## by peg : null
+               }
+               #initializer {            ## by peg : null
+                  #castexpression {            ## by peg : null
+                     #identifier: Student    ## by peg : null
+                      {            ## by peg : null
+                        #identifier: malloc   ## by peg : null
+                        #identifier: Student   ## by peg : null
+                     }
+                  }
+               }
+            }
+         }
+         #expressionstatement {            ## by peg : null
+            #assignmentexpression {            ## by peg : null
+               #ptr {            ## by peg : null
+                  #identifier: s   ## by peg : null
+                  #identifier: number    ## by peg : null
+               }
+               #assignmentoperator: =    ## by peg : null
+               #integerconstant: 10   ## by peg : null
+            }
+         }
+         #expressionstatement {            ## by peg : null
+            #assignmentexpression {            ## by peg : null
+               #ptr {            ## by peg : null
+                  #identifier: s   ## by peg : null
+                  #identifier: name    ## by peg : null
+               }
+               #assignmentoperator: =    ## by peg : null
+               #stringliteral: "naruto"   ## by peg : null
+            }
+         }
+         #returnstatement {            ## by peg : null
+            #identifier: s   ## by peg : null
+         }
+      }
+   }
+   #functiondefinition {            ## by peg : null
+      #typespecifier: int    ## by peg : null
+      #declarator {            ## by peg : null
+         #identifier: main   ## by peg : null
+         #typespecifier: void   ## by peg : null
+      }
+      #compoundstatement {            ## by peg : null
+         #declaration {            ## by peg : null
+            #typedefname {            ## by peg : null
+               #identifier: Student    ## by peg : null
+            }
+            #initdeclarator {            ## by peg : null
+               #declarator {            ## by peg : null
+                  #pointer: *   ## by peg : null
+                  #identifier: a    ## by peg : null
+               }
+               #initializer {            ## by peg : null
+                   {            ## by peg : null
+                     #identifier: new_Student   ## by peg : null
+                  }
+               }
+            }
+         }
+         #expressionstatement {            ## by peg : null
+             {            ## by peg : null
+               #identifier: printf   ## by peg : null
+               :    ## by peg : null
+               #argumentexpressionlist {            ## by peg : null
+                  #stringliteral: "%d\n"   ## by peg : null
+                  #ptr {            ## by peg : null
+                     #identifier: a   ## by peg : null
+                     #identifier: number   ## by peg : null
+                  }
+               }
+            }
+         }
+         #expressionstatement {            ## by peg : null
+             {            ## by peg : null
+               #identifier: printf   ## by peg : null
+               :    ## by peg : null
+               #argumentexpressionlist {            ## by peg : null
+                  #stringliteral: "%s\n"   ## by peg : null
+                  #ptr {            ## by peg : null
+                     #identifier: a   ## by peg : null
+                     #identifier: name   ## by peg : null
+                  }
+               }
+            }
+         }
+         #returnstatement {            ## by peg : null
+            #integerconstant: 0   ## by peg : null
+         }
+      }
+   }
+}

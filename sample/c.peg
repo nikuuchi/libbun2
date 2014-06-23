@@ -124,19 +124,18 @@ Declaration
     = << DeclarationSpecifiers@ InitDeclaratorList@? (Attribute / Assembler)@? SEMI #declaration>>;
 
 DeclarationSpecifiers
-    = << (( StorageClassSpecifier
+    = ( StorageClassSpecifier
        / TypeQualifier
        / FunctionSpecifier
        / Attribute
-       )@*
+       )*
        TypedefName@
        ( StorageClassSpecifier
        / TypeQualifier
        / FunctionSpecifier
        / Attribute
-       )@*
-      ) #declarationspecifiers >>
-    / (StorageClassSpecifier
+       )*
+    / ( StorageClassSpecifier
       / TypeSpecifier
       / TypeQualifier
       / FunctionSpecifier
@@ -177,49 +176,49 @@ TypeSpecifier
     ;
 
 StructOrUnionSpecifier
-    = StructOrUnion
-      ( Identifier? LWING StructDeclaration+ RWING
-      / Identifier
+    = StructOrUnion@
+      ( Identifier@? LWING StructDeclaration@+ RWING
+      / Identifier@
       )
     ;
 
 StructOrUnion
-    = STRUCT
-    / UNION
+    = << STRUCT #struct >>
+    / << UNION #union >>
     ;
 
 StructDeclaration
-    = SpecifierQualifierList StructDeclaratorList SEMI
+    = << SpecifierQualifierList StructDeclaratorList@ SEMI #structdeclaration >>
     ;
 
 SpecifierQualifierList
     = ( TypeQualifier*
         TypedefName
         TypeQualifier*
-      )
+      )@
     / ( TypeSpecifier
       / TypeQualifier
-      )+
+      )@+
     ;
 
 StructDeclaratorList
-    = StructDeclarator (COMMA StructDeclarator)*
+    = StructDeclarator <<@ (COMMA StructDeclarator)@ #structdeclaratorlist >>*
     ;
 
 StructDeclarator
-    = Declarator? COLON ConstantExpression
-    / Declarator
+    = Declarator@? COLON ConstantExpression@
+    / Declarator@
     ;
 
 EnumSpecifier
     = ENUM
-      ( Identifier? LWING EnumeratorList COMMA? RWING
-      / Identifier
+      ( Identifier@? LWING EnumeratorList@ COMMA? RWING
+      / Identifier@
       )
     ;
 
 EnumeratorList
-    = Enumerator (COMMA Enumerator)*
+    = Enumerator <<@ (COMMA Enumerator@)* #enumeratorlist >>
     ;
 
 Enumerator
@@ -390,13 +389,13 @@ PostfixExpression
       / LPAR TypeName RPAR LWING InitializerList COMMA? RWING
       )
       <<@
-      ( LBRK Expression RBRK
-      / LPAR ArgumentExpressionList? RPAR
-      / DOT Identifier
-      / PTR Identifier
-      / INC
-      / DEC
-      )@ #postfixexpression >>*
+      ( LBRK@ Expression@ RBRK@
+      / LPAR@ ArgumentExpressionList@? RPAR@
+      / DOT #dot Identifier@
+      / PTR #ptr Identifier@
+      / INC #inc
+      / DEC #dec
+      ) >>*
     ;
 
 ArgumentExpressionList
@@ -717,7 +716,7 @@ FloatSuffix = [flFL] ;
 
 EnumerationConstant = Identifier ;
 
-CharacterConstant = "L"? "'" Char* "'" Spacing ;
+CharacterConstant = << "L"? "'" Char@* "'" Spacing #characterconstant >>;
 
 Char = Escape / !['\n\\] . ;
 
@@ -737,7 +736,7 @@ HexEscape    = "\\x" HexDigit+ ;
 //  A.1.6  String Literals
 //-------------------------------------------------------------------------
 
-StringLiteral = "L"? (["] StringChar* ["] Spacing)+ ;
+StringLiteral = << "L"? (["] StringChar@* ["] Spacing)+ #stringliteral >>;
 
 StringChar = Escape / ![\"\n\\] . ;
 

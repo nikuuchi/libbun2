@@ -1,0 +1,42 @@
+parsed:
+#translationunit {            ## by peg : null
+   #functiondefinition {            ## by peg : null
+      #typespecifier: void    ## by peg : null
+      #declarator {            ## by peg : null
+         #pointer: *   ## by peg : null
+         #identifier: new_Student   ## by peg : null
+         #parameterdeclaration {            ## by peg : null
+            #typespecifier {            ## by peg : null
+               #struct: struct    ## by peg : null
+               #identifier: Student    ## by peg : null
+            }
+            #declarator {            ## by peg : null
+               #pointer: *   ## by peg : null
+               #identifier: s   ## by peg : null
+            }
+         }
+      }
+      #compoundstatement {            ## by peg : null
+         #expressionstatement {            ## by peg : null
+            #assignmentexpression {            ## by peg : null
+               #ptr {            ## by peg : null
+                  #identifier: s   ## by peg : null
+                  #identifier: number    ## by peg : null
+               }
+               #assignmentoperator: =    ## by peg : null
+               #integerconstant: 10   ## by peg : null
+            }
+         }
+         #expressionstatement {            ## by peg : null
+            #assignmentexpression {            ## by peg : null
+               #ptr {            ## by peg : null
+                  #identifier: s   ## by peg : null
+                  #identifier: name    ## by peg : null
+               }
+               #assignmentoperator: =    ## by peg : null
+               #stringliteral: "naruto"   ## by peg : null
+            }
+         }
+      }
+   }
+}

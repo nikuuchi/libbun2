@@ -21,7 +21,7 @@ parsed:
          #dowhilestatement {            ## by peg : null
             #compoundstatement {            ## by peg : null
                #expressionstatement {            ## by peg : null
-                  #postfixexpression {            ## by peg : null
+                  #inc {            ## by peg : null
                      #identifier: i   ## by peg : null
                   }
                }

@@ -35,7 +35,7 @@ parsed:
             }
             #compoundstatement {            ## by peg : null
                #expressionstatement {            ## by peg : null
-                  #postfixexpression {            ## by peg : null
+                  #inc {            ## by peg : null
                      #identifier: i   ## by peg : null
                   }
                }
@@ -51,7 +51,11 @@ parsed:
 		   ## by peg : null
                }
                #expressionstatement {            ## by peg : null
+<<<<<<< HEAD
                   #postfixexpression {            ## by peg : null
+=======
+                  #inc {            ## by peg : null
+>>>>>>> other_grammar
                      #identifier: c   ## by peg : null
                   }
                }

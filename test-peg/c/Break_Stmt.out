@@ -23,7 +23,7 @@ parsed:
                #identifier: i    ## by peg : null
                #integerconstant: 10    ## by peg : null
             }
-            #postfixexpression {            ## by peg : null
+            #inc {            ## by peg : null
                #identifier: i   ## by peg : null
             }
             #compoundstatement {            ## by peg : null

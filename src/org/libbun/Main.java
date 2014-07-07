@@ -44,6 +44,9 @@ public class Main {
 	// --verbose
 	public static boolean VerboseMode    = false;
 
+	// --verbose:ast
+	public static boolean VerboseAstMode = false;
+
 	// --verbose:peg
 	public static boolean VerbosePegMode = false;
 
@@ -98,6 +101,10 @@ public class Main {
 				if(argument.equals("--verbose:bun")) {
 					VerboseBunMode = true;
 				}
+				else if(argument.equals("--verbose:ast")){
+					VerboseAstMode = true;
+					VerboseMode = true;
+				}
 				else {
 					VerboseMode = true;
 				}
@@ -122,6 +129,7 @@ public class Main {
 		System.out.println("  --out|-o  FILE          Output filename");
 		System.out.println("  --verbose               Printing Debug infomation");
 		System.out.println("  --verbose:peg           Printing Peg/Debug infomation");
+		System.out.println("  --verbose:ast           Printing Peg AST infomation only(for testing)");
 		System.out.println("  --verbose:bun           Printing Peg/Bun infomation");
 		System.out.println("  --profile               Show memory usage and parse time");
 		Main._Exit(0, Message);
@@ -211,7 +219,7 @@ public class Main {
 						System.out.println("** uncosumed: '" + context + "' **");
 					}
 				}
-				if(VerbosePegMode || VerboseMode) {
+				if((VerbosePegMode || VerboseMode) && !VerboseAstMode) {
 					System.out.println();
 					context.showStatInfo(node);
 				}

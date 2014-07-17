@@ -1,6 +1,7 @@
 
 TopLevel
-    = << Stmt@+ #toplevel>>;
+    = Stmt
+	;
 
 Stmt
     = IfStmt EOS?
@@ -262,7 +263,7 @@ IntegerLiteral
 
 Number
     = << ('-' WS* / '+' WS*)? FloatLiteral   #float >>
-    / << ('-' WS* / '+' WS*)? IntegerLiteral #integer>>
+    / << ('-' WS* / '+' WS*)? IntegerLiteral #int >>
     ;
 
 Asterisk
